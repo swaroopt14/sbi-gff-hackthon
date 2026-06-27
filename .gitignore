@@ -1,0 +1,84 @@
+# ─── Environment & Secrets ───────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+vault-token
+
+# ─── Go ──────────────────────────────────────────────────────────────────────
+backend/bin/
+backend/tmp/
+*.exe
+*.test
+*.out
+vendor/
+*.so
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+agents/**/__pycache__/
+agents/**/*.pyc
+agents/**/*.pyo
+agents/**/*.pyd
+agents/**/.venv/
+agents/**/venv/
+agents/**/*.egg-info/
+agents/**/.pytest_cache/
+agents/**/.mypy_cache/
+agents/**/.ruff_cache/
+*.pyc
+__pycache__/
+.venv/
+venv/
+dist/
+*.egg-info/
+
+# ─── Node / Next.js ──────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.turbo/
+node_modules/
+.next/
+out/
+.turbo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ─── IDE & OS ────────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ─── Docker ──────────────────────────────────────────────────────────────────
+docker/data/
+docker/volumes/
+
+# ─── Build Artifacts ─────────────────────────────────────────────────────────
+dist/
+build/
+*.tar.gz
+*.zip
+
+# ─── Test & Coverage ─────────────────────────────────────────────────────────
+coverage/
+*.coverprofile
+htmlcov/
+.coverage
+junit.xml
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── Local Dev ───────────────────────────────────────────────────────────────
+.local/
+tmp/
+scratch/
