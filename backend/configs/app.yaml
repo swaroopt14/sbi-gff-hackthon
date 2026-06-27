@@ -1,0 +1,48 @@
+app:
+  env: development
+  port: "8080"
+  log_level: info
+
+database:
+  url: "postgres://aperture:aperture@localhost:5432/aperture?sslmode=disable"
+  max_open_conns: 25
+  max_idle_conns: 10
+
+redis:
+  url: "redis://localhost:6379"
+  password: ""
+  db: 0
+
+jwt:
+  private_key_path: "./configs/keys/jwt_private.pem"
+  public_key_path: "./configs/keys/jwt_public.pem"
+  access_token_ttl: 15m
+  refresh_token_ttl: 168h
+
+agents:
+  intent_url: "http://localhost:8101"
+  qualify_url: "http://localhost:8102"
+  personalise_url: "http://localhost:8103"
+  conversation_url: "http://localhost:8104"
+  document_url: "http://localhost:8105"
+  compliance_url: "http://localhost:8106"
+  explain_url: "http://localhost:8107"
+  audit_url: "http://localhost:8108"
+  timeout_seconds: 30
+
+storage:
+  endpoint: "localhost:9000"
+  access_key: "minioadmin"
+  secret_key: "minioadmin"
+  bucket: "aperture-documents"
+  use_ssl: false
+
+kafka:
+  brokers:
+    - "localhost:9092"
+  group_id: "aperture-backend"
+  use_mock: true
+
+cors:
+  allowed_origins:
+    - "http://localhost:3000"
